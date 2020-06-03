@@ -2,11 +2,13 @@ import { from, interval, of, Observable, bindCallback } from "rxjs";
 import { flatMap, toArray, map } from "rxjs/operators";
 import dns from 'dns';
 import DB, { Data } from './db';
+
 require('dotenv').config();
 require('./telegram');
-// Endpoints to hit.
-const hosts: Array<string> = process.env.HOSTS?.split(" ") || ["www.google.com"];
 
+// Endpoints to hit. Default is www.google.com
+const hosts: Array<string> = process.env.HOSTS?.split(" ") || ["www.google.com"];
+const INTERVAL = 10000;
 async function checkConnection(host: string): Promise<Data> {
     return new Promise((resolve: any, reject: any) => {
     let startTime = new Date().getTime();
@@ -25,7 +27,7 @@ async function checkConnection(host: string): Promise<Data> {
     //let servers = dns.getServers();
     //db.set('servers', servers).write();
 
-    let loop$ = interval(10000);
+    let loop$ = interval(INTERVAL);
     loop$.subscribe(
         () => from(hosts).pipe(
             flatMap(checkConnection),
