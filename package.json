@@ -1,0 +1,26 @@
+{
+  "name": "raspi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc -p .",
+    "prod": "node dist/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "lowdb": "^1.0.0",
+    "node-telegram-bot-api": "^0.50.0",
+    "rxjs": "^6.5.5"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/lowdb": "^1.0.9",
+    "@types/node": "^14.0.1",
+    "@types/node-telegram-bot-api": "^0.40.3"
+  }
+}
