@@ -24,8 +24,8 @@ async function checkConnection(host: string): Promise<Data> {
     try {
     let db = await DB();
     if (!db.has('data').value()) db.set('data', []).write();
-    //let servers = dns.getServers();
-    //db.set('servers', servers).write();
+    let servers = dns.getServers();
+    db.set('servers', servers).write();
 
     let loop$ = interval(INTERVAL);
     loop$.subscribe(
