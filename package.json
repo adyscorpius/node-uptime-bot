@@ -1,6 +1,8 @@
 {
   "name": "raspi",
   "version": "1.0.0",
+  "author": "Adit Sharda",
+  "private": true,
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
