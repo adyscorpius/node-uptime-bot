@@ -1,9 +1,9 @@
 {
-  "name": "raspi",
-  "version": "1.0.0",
+  "name": "node-uptime-bot",
+  "version": "0.0.1",
   "author": "Adit Sharda",
   "private": true,
-  "description": "",
+  "description": "A small bot to return home network information through Telegram.",
   "main": "./dist/index.js",
   "scripts": {
     "start": "ts-node src/index.ts",
@@ -11,7 +11,6 @@
     "prod": "node dist/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
