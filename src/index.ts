@@ -1,3 +1,4 @@
+process.env.NTBA_FIX_319="1";
 import { from, interval, of, Observable, bindCallback } from "rxjs";
 import { flatMap, toArray, map } from "rxjs/operators";
 import dns from 'dns';
